@@ -1,2 +1,2 @@
 # Caesar-Cipher
-The assignment wants to encrypt and decrypt the code by using function and if statments where each letter in the alphabet is shifted by a fixed key. 
+The assignment wants to encrypt and decrypt any words where each letter in the alphabet that is shifted by a fixed numeric key as command-line agrugments. The Python script is a basic implementaion of the Caesar cipher that demonstrate the Caesar cipher encryption and decryption process.  
