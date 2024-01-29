@@ -9,6 +9,9 @@ def encrypt(message, k):
     for char in message.upper():#This method is used to convert all characters in the message to uppercase.
         if char.isalpha():#It is a method in Python used to check if the given character is an alphabetic character.
             char_code=ord(char) # The function returns the Unicode code point of the character char.
+            
+            k = k % CHAR_RANGE # Use modulo operation to handle large keys
+
             new_char_code=char_code+k #The line calculates the new Unicode code point for the character after shifting by the specified key (k).
 
             if new_char_code>LAST_CHAR_CODE:#Basically,the code allows to start again from the beginning of the alphabet. 
@@ -46,7 +49,7 @@ if __name__ == "__main__":
 
     decrypted = decrypt(encrypted, key)  # decrypt the encrypted word
 
-    print("Your original word is:", message)
-    print("Your encrypted word is:", encrypted)
-    print("Your decrypted word is:", decrypted)
+    print("The original word is:", message)
+    print("The encrypted word is:", encrypted)
+    print("The decrypted word is:", decrypted)
 
